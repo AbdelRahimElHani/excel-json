@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel to JSON Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Excel to JSON Converter</h1>
+      <p>Upload an .xlsx file, then copy the JSON into the website's <code>data.json</code>. The file stays in your browser.</p>
+    </header>
+
+    <label class="upload" id="dropZone" for="fileInput">
+      <input type="file" id="fileInput" accept=".xlsx">
+      <span class="upload-title">Choose an Excel file</span>
+      <span class="upload-hint">or drag and drop it here</span>
+    </label>
+
+    <p class="status" id="status" role="status"></p>
+
+    <section id="result" hidden>
+      <div class="toolbar">
+        <label class="sheet-picker" id="sheetPicker" hidden>
+          Sheet
+          <select id="sheetSelect"></select>
+        </label>
+        <div class="actions">
+          <button type="button" class="primary" id="copyButton">Copy JSON</button>
+          <button type="button" id="downloadButton">Download data.json</button>
+        </div>
+      </div>
+      <textarea id="output" readonly spellcheck="false" aria-label="Generated JSON"></textarea>
+    </section>
+  </main>
+
+  <!-- XLSX library (SheetJS) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

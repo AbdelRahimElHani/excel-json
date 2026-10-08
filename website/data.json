@@ -1,0 +1,20 @@
+[
+  {
+    "Product": "Cola 0.33 l",
+    "Category": "Drinks",
+    "Price": 0.89,
+    "Stock": 240
+  },
+  {
+    "Product": "Orange Juice 1 l",
+    "Category": "Drinks",
+    "Price": 1.49,
+    "Stock": 96
+  },
+  {
+    "Product": "Salted Chips 150 g",
+    "Category": "Snacks",
+    "Price": 1.19,
+    "Stock": 130
+  }
+]

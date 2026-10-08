@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 1.75rem;
+}
+
+header p {
+  margin: 0 0 24px;
+  color: #52606d;
+}
+
+code {
+  padding: 1px 6px;
+  background: #e4e9ee;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Upload area */
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 32px 16px;
+  background: #ffffff;
+  border: 2px dashed #b8c2cc;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.upload:hover,
+.upload.dragover {
+  border-color: #1d6f42;
+  background: #f0f8f3;
+}
+
+.upload input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.upload:focus-within {
+  outline: 2px solid #1d6f42;
+  outline-offset: 2px;
+}
+
+.upload-title {
+  font-weight: 600;
+  color: #1d6f42;
+}
+
+.upload-hint {
+  font-size: 0.9rem;
+  color: #7b8794;
+}
+
+/* Status line */
+.status {
+  min-height: 1.5em;
+  margin: 16px 0 8px;
+  font-size: 0.95rem;
+  color: #52606d;
+}
+
+.status.error {
+  color: #b42318;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sheet-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #52606d;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+}
+
+select,
+button {
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #1d6f42;
+}
+
+button.primary {
+  background: #1d6f42;
+  border-color: #1d6f42;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background: #185c37;
+}
+
+/* JSON output */
+textarea {
+  display: block;
+  width: 100%;
+  height: 55vh;
+  min-height: 240px;
+  padding: 14px;
+  font-family: ui-monospace, "Cascadia Code", Consolas, Menlo, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #ffffff;
+  border: 1px solid #d9e0e6;
+  border-radius: 10px;
+  resize: vertical;
+  white-space: pre;
+}
+
+textarea:focus {
+  outline: 2px solid #1d6f42;
+  outline-offset: 1px;
+}
